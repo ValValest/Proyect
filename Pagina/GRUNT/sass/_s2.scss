@@ -1,0 +1,178 @@
+//Esta modificando toda la sección de los divs
+
+.vale  {
+    background-color: rgb(239, 227, 240);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+
+}
+
+// .content2 {
+//     // background-color: rgb(239, 227, 240);
+//     padding: 100px;
+//     display: flex;
+// }
+
+.tittle{
+    color:rgb(0, 0, 0);
+    font-size: medium;
+    text-align: center;
+}
+
+.iconos {
+    display: flex;
+    color:rgb(0, 0, 0);
+    font-size: medium;
+    width: auto;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 35px;
+    //margin: 200px
+}       
+
+#icon1{
+    font-size: 80px;
+    align:left;
+    margin: 120px;
+}
+
+#icon2{
+    font-size: 80px;
+    align:center;
+    margin: 80px;
+}
+
+#icon3{
+    font-size: 80px;
+    align:right;
+    margin: 80px;
+}
+
+.divider1{
+    border: #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000de;
+    width: 900px;
+    height: 5px;
+    margin: 1 auto;
+    flex-grow: 100;
+}
+
+.subcontent{
+    display: flex;
+    // background-color: rgb(239, 227, 240);
+    padding: 2%;
+    //gap: 100px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.texti{
+    color:rgb(0, 0, 0);
+    font-size: small;
+    text-align: center;
+}
+
+.rowb{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 30%;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+
+.text1{
+    color:rgb(0, 0, 0);
+    font-size: medium;
+    text-align: justify;
+}
+
+/*Aquí, todas las imágenes se modificaran con figure, en términos generales, dentro de figure, mando a traer a las imagenes y les hago 
+modificaciones de manera individual*/
+figure { 
+    width: auto;
+    
+    .img {
+        border-radius: 60%;
+        height: 600px;
+        width: 700px;
+        border: solid 120px  rgb(239, 227, 240);
+    }   
+}
+
+.divider{
+    border: #000000;
+    border-top: 1px solid #000000a4;
+    border-bottom: 1px solid #000000b2;
+    width: 800px;
+    height: 5px;
+    margin: 5% auto;
+    gap: 100px;
+}
+
+.dividert{
+    border: #000000;
+    border-top: 1px solid #000000a4;
+    border-bottom: 1px solid #000000b2;
+    width: 800px;
+    height: 5px;
+    margin: 5% auto;
+    gap: 200px;
+}
+.container{
+    display: flex;
+    color:rgb(0, 0, 0);
+    font-size: medium;
+    width: auto;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    gap: 0px;
+    //margin: 200px
+}
+
+.row1{
+    --bs-gutter-x: 50%;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 60%;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    height: auto;
+}
+
+#icon4{
+    font-size: 80px;
+    margin: 0px;
+}
+
+#icon5{
+    font-size: 80px;
+    margin: 0px;
+}

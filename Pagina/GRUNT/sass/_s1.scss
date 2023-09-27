@@ -1,0 +1,33 @@
+.row1{
+    width: 1000px;
+    height: 500px;
+}
+
+.text{
+color:rgb(255, 255, 255);
+   padding: 100px;
+   text-align: right;
+  }
+
+.but {
+    font-size: 50px;
+    align:right;
+    margin: 50px;
+}
+
+.image{
+    height:"50%";
+    width:"50%";
+    display: inline-block;
+    vertical-align: right;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5% 0% 1% 0%;
+    width: auto;
+}
