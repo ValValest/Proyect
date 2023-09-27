@@ -1,21 +1,22 @@
 <?php
 
-require "../config/conexion.php";
+require __DIR__ . "/../config/conexion.php";
+
 class imagen extends Connection
 {
     public static function mostrarDatos()
     {
         try {
-           $sql = "SELECT * FROM imagen";                      //Variable sql
-           $stmt = Connection::getConnection()->prepare($sql);  //Sentencia
-           $stmt->execute();                                    //Aquí ejecuta
+           $sql = "SELECT * FROM imagen";                      
+           $stmt = Connection::getConnection()->prepare($sql);  
+           $stmt->execute();                                    
            $result = $stmt->fetchAll();
-           return $result;                                      //Retorna todos los datos por medio de PDO
+           return $result;                                      
         }  catch (PDOException $th) {
            echo $th->getMessage();
         }
     }
-    public static function obtenerDatoId($id)                   //Obtenemos dato por id este $id*
+    public static function obtenerDatoId($id)                   
     {
         try {
             $sql = "SELECT * FROM parrafo WHERE id = :id";          //Lo mismo, de seccion traemos el id que es el mismo que $id* y vendrá del controlador. Para poner referencia ponemos ;id
@@ -31,8 +32,8 @@ class imagen extends Connection
     public static function guardarDato($data)
     {   
         try {
-          $sql = "INSERT INTO imagen (id_seccion, imagen) VALUES (:id_seccion, :imagen)";       //Insertamos en la tabla seccion
-          $stmt = Connection::getConnection()->prepare($sql);
+          $sql = "INSERT INTO imagen (id_seccion, imagen) VALUES (:id_seccion, :imagen)";
+          $stmt = Connection::getConnection()->prepare($sql);       
           $stmt->bindParam(':id_seccion', $data['id_seccion']);
           $stmt->bindParam(':imagen', $data['imagen']);          //data viene desde el controlador, por eso deben de tener el mismo nombre y los pasamos a los que estaán con :
           $stmt->execute();                                     //Ejecuta

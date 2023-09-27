@@ -209,10 +209,9 @@ const appI = new (function () {
     this.imagen = document.getElementById("imagen");
     this.id_seccion = document.getElementById("id_seccionI");
 
-
     this.listado = () => {
        
-        fetch("./app/controllers/listadoI.php")
+       fetch("./app/controllers/listadoI.php")
 
             .then((res) => res.json())
             .then((data) => {
@@ -241,7 +240,6 @@ const appI = new (function () {
         form.append("idI", this.id.value);
         form.append("imagen", this.imagen.value);
         form.append("id_seccionI", this.id_seccion.value);
-        console.log(form.value);
         if (this.id.value == "") {
         fetch("./app/controllers/guardarI.php", {
             method: "POST",

@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config/conexion.php";
+require "../config/conexion.php";
 
 class parrafo extends Connection
 {

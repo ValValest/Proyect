@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    <form action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="appI.guardar()">   
+                    <form action="upload.php" method="POST" enctype="multipart/form-data">   
                         <div class="mb-3">
                             <input type="hidden" id="idI" name="id" />
                             <label for="imagen" class="form-label">Imagen</label>
