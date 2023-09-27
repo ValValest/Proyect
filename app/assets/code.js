@@ -108,7 +108,6 @@ const app_p = new (function () {
     this.descripcion = document.getElementById("descripcion");
     this.id_seccion = document.getElementById("id_seccionp");
 
-
     this.listado = () => {
       fetch("./app/controllers/listadop.php")
             .then((res) => res.json())
@@ -129,6 +128,7 @@ const app_p = new (function () {
                 });
             })
             .catch((error) => console.log(error));
+            //console.log(data);
             
     };
     this.guardar = () => {

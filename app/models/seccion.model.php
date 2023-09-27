@@ -1,28 +1,28 @@
 <?php
 
-require "../config/conexion.php";
+require_once "../config/conexion.php";
 
 class seccion extends Connection
 {
     public static function mostrarDatos()
     {
         try {
-           $sql = "SELECT * FROM seccion";                      //Variable sql
-           $stmt = Connection::getConnection()->prepare($sql);  //Sentencia
-           $stmt->execute();                                    //Aquí ejecuta
+           $sql = "SELECT * FROM seccion";                      
+           $stmt = Connection::getConnection()->prepare($sql);  
+           $stmt->execute();                                    
            $result = $stmt->fetchAll();
-           return $result;                                      //Retorna todos los datos por medio de PDO
+           return $result;                                     
         }  catch (PDOException $th) {
            echo $th->getMessage();
         }
     }
-    public static function obtenerDatoId($id)                   //Obtenemos dato por id este $id*
+    public static function obtenerDatoId($id)                   
     {
         try {
-            $sql = "SELECT * FROM seccion WHERE id = :id";          //Lo mismo, de seccion traemos el id que es el mismo que $id* y vendrá del controlador. Para poner referencia ponemos ;id
-            $stmt = Connection::getConnection()->prepare($sql);     //Prepara sentencia
-            $stmt->bindParam(':id', $id);                           //Con el bindParam, se pasan los parámetros, lo que esta en la consulta :id y lo que viene de otro archivo $id
-            $stmt->execute();                                       //Ejecuta y retorna con fetch ya que solo devolverá un dato
+            $sql = "SELECT * FROM seccion WHERE id = :id";          
+            $stmt = Connection::getConnection()->prepare($sql);     
+            $stmt->bindParam(':id', $id);                       
+            $stmt->execute();                                      
             $result = $stmt->fetch();
             return $result;
         }   catch (PDOException $th) {

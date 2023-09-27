@@ -45,19 +45,19 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="seccion.php" class="nav-link active">
+              <a href="/seccion.php" class="nav-link active">
                 <i class="far fa-circle nav-icon"></i>
                 <p>SECCIÓN</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="parrafo.php" class="nav-link">
+              <a href="/parrafo.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>DESCRIPCIÓN</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="img.php" class="nav-link">
+              <a href="/img.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>IMAGEN</p>
               </a>
