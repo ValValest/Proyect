@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog Personal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
     </style>
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/adminlte.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    
+
 
 
 </head>
@@ -22,57 +21,55 @@
 <body class="bottom"><!--Primera sección, pantera con texto, dividido en dos columnas-->
     <nav class="navbar sticky-top navbar-expand-lg bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href=#>HOME</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Scholarship</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hobby</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Curiosities
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="index.php">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <a class="navbar-brand" href=#>HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Scholarship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hobby</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Curiosities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.php">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Projects</a>
+                    </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Projects</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <section id="mood" class="content">
         <div class="col-md-4 text">
-            <h1 class="mt-5"><strong>Valeria Valdés Estéves.</strong></h1>
-            <p class="mt-5">Just a simple single page responsive template brought to you by 
-                <a href="https://getbootstrap.com/docs/4.0/layout/grid/" class="nav-toggle" target="_blank"
-                    style="color: aliceblue; text-decoration:none; border-bottom:1px dotted;"> HTML5 UP.</a></p>
+            <h1 class="mt-5">Valeria</h1>
+            <p class="mt-5">Conexión con base de datos
+                <a href="https://getbootstrap.com/docs/4.0/layout/grid/" class="nav-toggle" target="_blank" style="color: aliceblue; text-decoration:none; border-bottom:1px dotted;"> HTML5 UP.</a>
+            </p>
             <div class="but">
-                <button type="button" class="btn btn-outline-light float right btn-lg"><a class="nav-toggle"
-                        href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank" style="color:aliceblue"
-                        text-decoration="none;">Download</a>
+                <button type="button" class="btn btn-outline-light float right btn-lg"><a class="nav-toggle" href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank" style="color:aliceblue" text-decoration="none;">Download</a>
                 </button>
-                <button type="button" class="btn btn-outline-light float right btn-lg"><a
-                        href="https://html5up.net/fractal" class="nav-toggle" target="_blank" style="color:aliceblue"
-                        text-decoration="none;"><i class="bi bi-cloud-download"></i>Learn More</a>
+                <button type="button" class="btn btn-outline-light float right btn-lg"><a href="https://html5up.net/fractal" class="nav-toggle" target="_blank" style="color:aliceblue" text-decoration="none;"><i class="bi bi-cloud-download"></i>Learn More</a>
                 </button>
-                
+
             </div>
         </div>
         <div class="image">
@@ -91,31 +88,75 @@
                 <br>
 
                 <!-- ------------Conexión con base de datos, empezamos a editar pág. por medio de formulario------------------------------------------------------------------------ -->
-                <?php 
-                    require './conexion.php';
+                <?php
+                require './conexion.php';
 
-                    $querys = "SELECT nombre FROM seccion where id = 10;";
-                        $results = Connection::getConnection()->query($querys);
-                        
-                        while($row = $results->fetch(PDO::FETCH_ASSOC)){
-                            $descripcions = $row['nombre'];
-                        }
+                $queryt = "SELECT titulo FROM seccion where id = 11;";
+                $resultt = Connection::getConnection()->query($queryt);
 
-                    $queryp = "SELECT descripcion FROM parrafo where id = 19;";
-                        $resultp = Connection::getConnection()->query($queryp);                     
-                        
-                        while($row = $resultp->fetch(PDO::FETCH_ASSOC)){
-                            $descripcionp = $row['descripcion'];
-                        }
-                    
-                    $queryi = "SELECT imagen FROM imagen where id = 16;";
-                        $resulti = Connection::getConnection()->query($queryi);
+                while ($row = $resultt->fetch(PDO::FETCH_ASSOC)) {
+                    $descripciont = $row['titulo'];
+                }
+                
 
-                        while($row = $resulti->fetch(PDO::FETCH_ASSOC)){
-                            $descripcioni = $row['imagen'];
-                        }
-                        ?>
-                <h3><?php echo $descripcionp; ?></h3>
+
+                $query_v = "SELECT nombre FROM seccion where id = 46;";
+                $result_v = Connection::getConnection()->query($query_v);
+
+                while ($row = $result_v->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_v = $row['nombre'];
+                }
+                $query_m = "SELECT descripcion FROM parrafo where id = 46;";
+                $result_m= Connection::getConnection()->query($query_m);
+
+                while ($row = $result_m->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_m = $row['descripcion'];
+                }
+
+
+
+                $query_s = "SELECT nombre FROM seccion where id = 9;";
+                $result_s = Connection::getConnection()->query($query_s);
+
+                while ($row = $result_s->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_s = $row['nombre'];                        //ID9SECCIÓN/TITULOSEC:UNO/NOMBRESEC:VALERIA...:)
+                }
+
+                $query_d = "SELECT descripcion FROM parrafo where id = 4;";
+                $result_d = Connection::getConnection()->query($query_d);
+
+                while ($row = $result_d->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_d = $row['descripcion'];                   //ID4ENBDYTABDESCRIP/SECID11
+                }
+
+
+
+                $querys = "SELECT nombre FROM seccion where id = 11;";
+                $results = Connection::getConnection()->query($querys);
+
+                while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcions = $row['nombre'];                         //SEC11/NOMBREHOLA,PROBANDO...
+                }
+                $query = "SELECT descripcion FROM parrafo where id = 3;";
+                $result = Connection::getConnection()->query($query);
+
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion = $row['descripcion'];                     //ID3DELPÁRRAFOQUEVOYMODFICARID_SECCION11
+                }
+
+
+
+                $queryi = "SELECT imagen FROM imagen where id = 46;";
+                $resulti = Connection::getConnection()->query($queryi);
+
+                while ($row = $resulti->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcioni = $row['imagen'];
+                }
+                ?>
+                <h1><?php echo $descripcion_s; ?></h1> <!--ID9SECCIÓN/TITULOSEC:UNO/NOMBRESEC:VALERIA...:)-->
+                <h3>
+                    <?php echo $descripcion_d; ?> <!--ID4ENBDYTABDESCRIP/SECID11 -->
+                </h3>
             </div>
             <span class="">
                 <i class="bi bi-radioactive" id="icon1"></i>
@@ -127,12 +168,14 @@
         <!-- Ya no se necesita hacer más secciones, basta con divs, se agregan en el contorno "vale" -->
         <div class="subcontent"> <!--primer recuadro con texto e imagen, todo dentro de subcontent-->
             <div class="text1">
-                <p>
-                <h3><?php echo $descripcions; ?></h3>
-                </p>
+            <h1><?php echo $descripcions; ?></h1>
+                <h3>
+                   <?php echo $descripcion; ?> <!--ID3 DEL PÁRRAFO QUE VOY A MODFICAR/SEC11-->
+                     </h3>
+                
             </div>
             <figure class="img">
-                <img src="./imagen/<?php echo $descripcioni;?>" alt="" class="img">
+                <img src="./imagen/<?php echo $descripcioni; ?>" alt="" class="img">
                 <!--PARA DAR ANIMACIÓN A LA IMGEN class="img animate__animated animate__fadeIn" style="animation-duration: 5s;">-->
                 <hr class="divider">
             </figure>
@@ -143,19 +186,9 @@
                 <hr class="divider">
             </figure>
             <div class="text1">
+                <h1><?php echo $descripcion_v; ?></h1>
                 <p>
-                    Vivamus velit magna, rhoncus nec vulputate ut, auctor efficitur eros.
-                    Donec semper elit quis libero posuere dapibus. Mauris suscipit auctor velit id auctor. Fusce ut
-                    tincidunt libero.
-                    Aliquam consectetur lectus at neque vulputate blandit. Maecenas eu velit nibh. Quisque ex arcu,
-                    fringilla ac neque sed, laoreet interdum purus.
-                    Sed luctus dolor at semper convallis.
-                    Morbi id efficitur nisi, in molestie odio. Cras pharetra aliquam varius. Ut vitae nisi at leo
-                    molestie pulvinar.
-                    Nam lacinia posuere ornare. Vestibulum porta leo id cursus consequat. Vestibulum sem elit,
-                    pellentesque eget posuere nec, molestie in risus.
-                    Quisque elementum condimentum nunc, vel suscipit justo dictum vel. Suspendisse diam orci, finibus id
-                    nisi vel, congue sollicitudin elit. Vivamus non libero mi. In nec efficitur nisl.
+                <?php echo $descripcion_m; ?>
                 </p>
             </div>
         </div>
@@ -218,13 +251,11 @@
         </div>
     </section>
 
-    
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>

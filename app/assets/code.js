@@ -25,7 +25,7 @@ const app = new (function () {
                 });
             })
             .catch((error) => console.log(error));
-            
+
     };
     this.guardar = () => {
         var form = new FormData();
@@ -36,59 +36,59 @@ const app = new (function () {
         //console.log(this.nombre.value);
         //console.log(this.titulo.value);
         if (this.id.value == "") {
-        fetch("./app/controllers/guardar.php", {
+            fetch("./app/controllers/guardar.php", {
+                method: "POST",
+                body: form,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Creado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
+        } else {
+            fetch("./app/controllers/actualizar.php", {
+                method: "POST",
+                body: form,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Actualizado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
+        }
+    };
+    this.editar = (id) => {
+        var form = new FormData();
+        form.append("id", id);
+        fetch("./app/controllers/editar.php", {
             method: "POST",
             body: form,
         })
             .then((res) => res.json())
             .then((data) => {
-              alert("Creado con exito");
-              this.listado();
-              this.limpiar();
+                this.id.value = data.id;
+                this.titulo.value = data.titulo;
+                this.nombre.value = data.nombre;
             })
             .catch((error) => console.log(error));
-        }else {
-         fetch("./app/controllers/actualizar.php", {
-            method: "POST",
-            body: form,
-         })
-          .then((res) => res.json())
-          .then((data) => {
-            alert("Actualizado con exito");
-            this.listado();
-            this.limpiar();
-          })
-          .catch((error) => console.log(error));
-        }
-    };        
-    this.editar = (id) => {
-      var form = new FormData();
-      form.append("id", id);
-      fetch("./app/controllers/editar.php", {
-        method: "POST",
-        body: form,
-      })
-        .then((res) => res.json())
-        .then((data) => {
-            this.id.value = data.id;
-            this.titulo.value = data.titulo;
-            this.nombre.value = data.nombre;
-        })
-        .catch((error) => console.log(error));
     };
     this.eliminar = (id) => {
-      var form = new FormData();
-      form.append("id" , id);
+        var form = new FormData();
+        form.append("id", id);
         fetch("./app/controllers/eliminar.php", {
-        method: "POST",
-        body: form,
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            alert("Eliminado con exito");
-            this.listado();
+            method: "POST",
+            body: form,
         })
-       .catch((error) => console.log(error));
+            .then((res) => res.json())
+            .then((data) => {
+                alert("Eliminado con exito");
+                this.listado();
+            })
+            .catch((error) => console.log(error));
     };
     this.limpiar = () => {
         this.id.value = "";
@@ -96,11 +96,12 @@ const app = new (function () {
         this.nombre.value = "";
     };
 })();
-app.listado(); 
+app.listado();
 //Aquí llamamos a la función, para llamar los datos
 //Dentro de app, está guardar, en donde hacemos referencia a onsubmit
 
-//PÁRRAFO
+
+//-------------------PÁRRAFO/DESCRIPCIÓN-------------------
 
 const app_p = new (function () {
     this.tbody_p = document.getElementById("tbody_p");
@@ -109,7 +110,7 @@ const app_p = new (function () {
     this.id_seccion = document.getElementById("id_seccionp");
 
     this.listado = () => {
-      fetch("./app/controllers/listadop.php")
+        fetch("./app/controllers/listadop.php")
             .then((res) => res.json())
             .then((data) => {
                 this.tbody_p.innerHTML = "";      //La variable app, podrá eliminar y actualizar el dato
@@ -128,8 +129,8 @@ const app_p = new (function () {
                 });
             })
             .catch((error) => console.log(error));
-            //console.log(data);
-            
+        //console.log(data);
+
     };
     this.guardar = () => {
         var form = new FormData();
@@ -138,59 +139,60 @@ const app_p = new (function () {
         form.append("id_seccionp", this.id_seccion.value);
 
         if (this.id.value == "") {
-        fetch("./app/controllers/guardarp.php", {
+            fetch("./app/controllers/guardarp.php", {
+                method: "POST",
+                body: form,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Creado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
+        } else {
+            fetch("./app/controllers/actualizarp.php", {
+                method: "POST",
+                body: form,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Actualizado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
+        }
+    };
+    this.editar = (id) => {
+        var form = new FormData();
+
+        form.append("idp", id);
+        fetch("./app/controllers/editarp.php", {
             method: "POST",
             body: form,
         })
             .then((res) => res.json())
             .then((data) => {
-              alert("Creado con exito");
-              this.listado();
-              this.limpiar();
+                this.id.value = data.id;
+                this.descripcion.value = data.descripcion;
+                this.seccion_idp.value = data.seccion_id;
             })
             .catch((error) => console.log(error));
-        }else {
-         fetch("./app/controllers/actualizarp.php", {
-            method: "POST",
-            body: form,
-         })
-          .then((res) => res.json())
-          .then((data) => {
-            alert("Actualizado con exito");
-            this.listado();
-            this.limpiar();
-          })
-          .catch((error) => console.log(error));
-        }
-    };
-    this.editar = (id) => {
-        var form = new FormData();
-        
-        form.append("idp", id);
-        fetch("./app/controllers/editarp.php",{
-          method: "POST",
-          body: form,
-        })
-        .then((res) => res.json())
-        .then((data) => {
-          this.descripcion.value = data.descripcion;
-          this.seccion_idp.value = data.section_id;
-        })
-        .catch((error) => console.log(error));
     };
     this.eliminar = (id) => {
-      var form = new FormData();
-      form.append("id" , id);
+        var form = new FormData();
+        form.append("id", id);
         fetch("./app/controllers/eliminarp.php", {
-        method: "POST",
-        body: form,
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            alert("Eliminado con exito");
-            this.listado();
+            method: "POST",
+            body: form,
         })
-       .catch((error) => console.log(error));
+            .then((res) => res.json())
+            .then((data) => {
+                alert("Eliminado con exito");
+                this.listado();
+            })
+            .catch((error) => console.log(error));
     };
     this.limpiar = () => {
         this.id.value = "";
@@ -198,9 +200,9 @@ const app_p = new (function () {
         this.id_seccion.value = "";
     };
 })();
-app_p.listado(); 
+app_p.listado();
 
-//IMAGEN
+//-------------------------IMAGEN------------------------
 
 const appI = new (function () {
 
@@ -210,8 +212,8 @@ const appI = new (function () {
     this.id_seccion = document.getElementById("id_seccionI");
 
     this.listado = () => {
-       
-       fetch("./app/controllers/listadoI.php")
+
+        fetch("./app/controllers/listadoI.php")
 
             .then((res) => res.json())
             .then((data) => {
@@ -233,7 +235,7 @@ const appI = new (function () {
                 });
             })
             .catch((error) => console.log(error));
-            //console.log($imag);
+        //console.log($imag);
     };
     this.guardar = () => {
         var form = new FormData();
@@ -241,59 +243,61 @@ const appI = new (function () {
         form.append("imagen", this.imagen.value);
         form.append("id_seccionI", this.id_seccion.value);
         if (this.id.value == "") {
-        fetch("./app/controllers/guardarI.php", {
-            method: "POST",
-            body: form,
-        })
-            .then((res) => res.json())
-            .then((data) => {
-              alert("Creado con exito");
-              this.listado();
-              this.limpiar();
+            fetch("./app/controllers/guardarI.php", {
+                method: "POST",
+                body: form,
             })
-            .catch((error) => console.log(error));
-        }else {
-         fetch("./app/controllers/actualizarI.php", {
-            method: "POST",
-            body: form,
-         })
-          .then((res) => res.json())
-          .then((data) => {
-            alert("Actualizado con exito");
-            this.listado();
-            this.limpiar();
-          })
-          .catch((error) => console.log(error));
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Creado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
+        } else {
+            fetch("./app/controllers/actualizarI.php", {
+                method: "POST",
+                body: form,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert("Actualizado con exito");
+                    this.listado();
+                    this.limpiar();
+                })
+                .catch((error) => console.log(error));
         }
     };
     this.editar = (id) => {
         var form = new FormData(); //esta enviando datos al servidor através de FormData       
         form.append("id", id); //idI mi parámetro en el formulario con el valor de id. Utiliza POST 
-        fetch("./app/controllers/editarI.php",{
-          method: "POST",
-          body: form,
+        fetch("./app/controllers/editarI.php", {
+            method: "POST",
+            body: form,
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-          //this.imagen.value = data.descripcion; al no tener un objeto, genereaba problema, en vez de editar la imagen, editamos la sección
-          this.id_seccion.value = data.id_seccion;
-        })
-        .catch((error) => console.log(error));
-   };
+            .then((res) => res.json())
+            .then((data) => {
+                
+                //this.imagen.value = data.descripcion; al no tener un objeto, genereaba problema, en vez de editar la imagen, editamos la sección
+                this.id.value = data.id;
+                //this.imagen.value = data.imagen;
+                this.id_seccion.value = data.id_seccion;
+            })
+            .catch((error) => console.log(error));
+    };
     this.eliminar = (id) => {
-      var form = new FormData();
-      form.append("id" , id);
+        var form = new FormData();
+        form.append("id", id);
         fetch("./app/controllers/eliminarI.php", {
-        method: "POST",
-        body: form,
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            alert("Eliminado con exito");
-            this.listado();
+            method: "POST",
+            body: form,
         })
-       .catch((error) => console.log(error));
+            .then((res) => res.json())
+            .then((data) => {
+                alert("Eliminado con exito");
+                this.listado();
+            })
+            .catch((error) => console.log(error));
     };
     this.limpiar = () => {
         this.id.value = "";
@@ -301,7 +305,7 @@ const appI = new (function () {
         this.id_seccion.value = "";
     };
 })();
-appI.listado(); 
+appI.listado();
 
 
 
