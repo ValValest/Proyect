@@ -100,6 +100,21 @@
                 
 
 
+                $query_l = "SELECT nombre FROM seccion where id = 47;";
+                $result_l = Connection::getConnection()->query($query_l);
+
+                while ($row = $result_l->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_l = $row['nombre'];
+                }
+                $query_n = "SELECT descripcion FROM parrafo where id = 47;";
+                $result_n= Connection::getConnection()->query($query_n);
+
+                while ($row = $result_n->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_n = $row['descripcion'];
+                }
+
+
+
                 $query_v = "SELECT nombre FROM seccion where id = 46;";
                 $result_v = Connection::getConnection()->query($query_v);
 
@@ -194,17 +209,9 @@
         </div>
         <div class="subcontent">
             <div class="text1">
+                <h1><?php echo $descripcion_l; ?></h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur aliquam massa, a laoreet
-                    lacus bibendum et.
-                    Mauris condimentum volutpat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    ut faucibus nisi.
-                    Maecenas at neque efficitur erat tincidunt tincidunt. Nullam at justo quis magna mattis consequat ac
-                    a tortor.
-                    Vivamus consectetur et magna vel laoreet. Praesent maximus id libero nec lobortis.
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra,
-                    per inceptos himenaeos.
+                <?php echo $descripcion_n; ?>
                 </p>
             </div>
             <figure class="img3">
