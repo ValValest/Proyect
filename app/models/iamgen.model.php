@@ -19,7 +19,7 @@ class imagen extends Connection
     public static function obtenerDatoId($id)                   
     {
         try {
-            $sql = "SELECT * FROM parrafo WHERE id = :id";          //Lo mismo, de seccion traemos el id que es el mismo que $id* y vendrá del controlador. Para poner referencia ponemos ;id
+            $sql = "SELECT * FROM imagen WHERE id = :id";          //Lo mismo, de seccion traemos el id que es el mismo que $id* y vendrá del controlador. Para poner referencia ponemos ;id
             $stmt = Connection::getConnection()->prepare($sql);     //Prepara sentencia
             $stmt->bindParam(':id', $id);                           //Con el bindParam, se pasan los parámetros, lo que esta en la consulta :id y lo que viene de otro archivo $id
             $stmt->execute();                                       //Ejecuta y retorna con fetch ya que solo devolverá un dato
@@ -49,6 +49,7 @@ class imagen extends Connection
           $stmt = Connection::getConnection()->prepare($sql);
           $stmt->bindParam(':id_seccion', $data['id_seccion']);
           $stmt->bindParam(':imagen', $data['imagen']);
+          $stmt->bindParam(':id', $data['id']);
           $stmt->execute();
           return true;
         } catch (PDOException $th) {

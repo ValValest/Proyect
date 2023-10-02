@@ -207,9 +207,10 @@ app_p.listado();
 const appI = new (function () {
 
     this.tbodyI = document.getElementById("tbodyI");
-    this.id = document.getElementById("idI");
+    this.idI = document.getElementById("idI");
     this.imagen = document.getElementById("imagen");
     this.id_seccion = document.getElementById("id_seccionI");
+    this.imagenUrl = document.getElementById("imagenUrl");
 
     this.listado = () => {
 
@@ -237,54 +238,29 @@ const appI = new (function () {
             .catch((error) => console.log(error));
         //console.log($imag);
     };
-    this.guardar = () => {
-        var form = new FormData();
-        form.append("idI", this.id.value);
-        form.append("imagen", this.imagen.value);
-        form.append("id_seccionI", this.id_seccion.value);
-        if (this.id.value == "") {
-            fetch("./app/controllers/guardarI.php", {
-                method: "POST",
-                body: form,
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    alert("Creado con exito");
-                    this.listado();
-                    this.limpiar();
-                })
-                .catch((error) => console.log(error));
-        } else {
-            fetch("./app/controllers/actualizarI.php", {
-                method: "POST",
-                body: form,
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    alert("Actualizado con exito");
-                    this.listado();
-                    this.limpiar();
-                })
-                .catch((error) => console.log(error));
-        }
-    };
+
     this.editar = (id) => {
-        var form = new FormData(); //esta enviando datos al servidor através de FormData       
-        form.append("id", id); //idI mi parámetro en el formulario con el valor de id. Utiliza POST 
+        var form = new FormData();
+        form.append("idI", id);
         fetch("./app/controllers/editarI.php", {
-            method: "POST",
-            body: form,
+          method: "POST",
+          body: form,
         })
-            .then((res) => res.json())
-            .then((data) => {
-                
-                //this.imagen.value = data.descripcion; al no tener un objeto, genereaba problema, en vez de editar la imagen, editamos la sección
-                this.id.value = data.id;
-                //this.imagen.value = data.imagen;
-                this.id_seccion.value = data.id_seccion;
-            })
-            .catch((error) => console.log(error));
-    };
+          .then((res) => res.json())
+          .then((data) => {
+            // Obtener los elementos HTML por su ID
+            var idInput = document.getElementById("idI");
+            var imagenInput = document.getElementById("imagenUrl");
+            var seccionInput = document.getElementById("id_seccionI");
+            console.log(data);
+            // Actualizar los valores de los campos de entrada
+            idInput.value = data.id;
+            imagenInput.value = data.imagen;
+            seccionInput.value = data.id_seccion;
+
+          })
+          .catch((error) => console.log(error));
+      };
     this.eliminar = (id) => {
         var form = new FormData();
         form.append("id", id);
@@ -300,7 +276,7 @@ const appI = new (function () {
             .catch((error) => console.log(error));
     };
     this.limpiar = () => {
-        this.id.value = "";
+        this.idI.value = "";
         this.imagen.value = "";
         this.id_seccion.value = "";
     };

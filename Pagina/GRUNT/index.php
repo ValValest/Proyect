@@ -161,12 +161,20 @@
 
 
 
-                $queryi = "SELECT imagen FROM imagen where id = 46;";
+                $queryi = "SELECT imagen FROM imagen where id = 78;";
                 $resulti = Connection::getConnection()->query($queryi);
 
                 while ($row = $resulti->fetch(PDO::FETCH_ASSOC)) {
                     $descripcioni = $row['imagen'];
                 }
+
+                $query_i = "SELECT imagen FROM imagen where id = 79;";
+                $result_i = Connection::getConnection()->query($query_i);
+
+                while ($row = $result_i->fetch(PDO::FETCH_ASSOC)) {
+                    $descripcion_i = $row['imagen'];
+                }
+
                 ?>
                 <h1><?php echo $descripcion_s; ?></h1> <!--ID9SECCIÓN/TITULOSEC:UNO/NOMBRESEC:VALERIA...:)-->
                 <h3>
@@ -190,14 +198,14 @@
                 
             </div>
             <figure class="img">
-                <img src="./imagen/<?php echo $descripcioni; ?>" alt="" class="img">
+                <img src="../../imagen/<?php echo $descripcioni; ?>" alt="" class="img">
                 <!--PARA DAR ANIMACIÓN A LA IMGEN class="img animate__animated animate__fadeIn" style="animation-duration: 5s;">-->
                 <hr class="divider">
             </figure>
         </div>
         <div class="subcontent">
             <figure class="img"> <!--Ocupamos figure para evitar que las imgs causen problemas-->
-                <img src="./imagenes/tigre.jpg" alt="" class="img">
+                <img src="../../imagen/<?php echo $descripcion_i; ?>" alt="" class="img">
                 <hr class="divider">
             </figure>
             <div class="text1">

@@ -53,15 +53,16 @@
                         </div>
                     </div>
 
-                    <form action="upload.php" method="POST" enctype="multipart/form-data">   
+                    <form action="./upload.php" method="POST" enctype="multipart/form-data">   
                         <div class="mb-3">
                             <input type="hidden" id="idI" name="id" />
+                            <input type="hidden" id = "imagenUrl" name="imagenUrl"/>
                             <label for="imagen" class="form-label">Imagen</label>
                             <input type="file" value="" class="form-control" name="imagen" id="imagen" placeholder="Imagen_Sección" autofocus required />
                             
                         <label for="id_seccionI" class="form-label">Nombre de la Sección</label>
                         <input type="text" class="form-control mb-2" name="id_seccionI" id="id_seccionI" placeholder="Sección" required />
-                        <button type="submit" class="btn btn-secondary">Guardar</button>
+                        <button type="submit" name="guardar" class="btn btn-secondary">Guardar</button>
                     </form>
 
                     <table class="table table-hover table-bordered w-60 mx-auto">
